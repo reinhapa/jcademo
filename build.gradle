@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java-library'
+
+    java {
+    
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation "jakarta.resource:jakarta.resource-api:$jakartaResourceApi"
+        testImplementation "org.junit.jupiter:junit-jupiter-api:$junitJupiterApi"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
+    }
+
+    tasks.named('test') {
+        useJUnitPlatform()
+    }
+}

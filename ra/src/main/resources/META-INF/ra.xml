@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/connector_1_7.xsd" id="Connector_ID" version="1.7">
+  <description>Sample Resource Adapter</description>
+  <display-name>SampleRA</display-name>
+  <eis-type>Sample</eis-type>
+  <resourceadapter-version>1.0</resourceadapter-version>
+  <resourceadapter>
+    <outbound-resourceadapter>
+      <connection-definition>
+        <managedconnectionfactory-class>net.reini.jcademo.SampleManagedConnectionFactory</managedconnectionfactory-class>
+        <connectionfactory-interface>net.reini.jcademo.SampleConnectionFactory</connectionfactory-interface>
+        <connectionfactory-impl-class>net.reini.jcademo.SampleConnectionFactoryImpl</connectionfactory-impl-class>
+        <connection-interface>net.reini.jcademo.SampleConnection</connection-interface>
+        <connection-impl-class>net.reini.jcademo.SampleConnectionImpl</connection-impl-class>
+      </connection-definition>
+    </outbound-resourceadapter>
+  </resourceadapter>
+</connector>

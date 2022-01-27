@@ -1,0 +1,4 @@
+rootProject.name = 'jcademo'
+include 'ra'
+include 'webapp'
+include 'demoear'

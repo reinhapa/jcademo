@@ -1,0 +1,8 @@
+plugins {
+    id 'ear'
+}
+
+dependencies {
+    deploy project(path: ':ra', configuration: 'archives')
+    deploy project(path: ':webapp', configuration: 'archives')
+}

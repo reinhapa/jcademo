@@ -1,0 +1,8 @@
+plugins {
+    id 'war'
+}
+
+dependencies {
+    providedCompile project(':ra')
+    compileOnly "jakarta.platform:jakarta.jakartaee-api:$jakartaJakartaEeApi"
+}

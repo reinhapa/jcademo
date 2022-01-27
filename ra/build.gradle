@@ -1,0 +1,7 @@
+dependencies {
+    compileOnly "jakarta.resource:jakarta.resource-api:$jakartaResourceApi"
+}
+
+jar {
+    archiveExtension = 'rar'
+}
