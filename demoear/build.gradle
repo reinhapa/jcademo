@@ -5,4 +5,32 @@ plugins {
 dependencies {
     deploy project(path: ':ra', configuration: 'archives')
     deploy project(path: ':webapp', configuration: 'archives')
+    earlib 'ch.qos.logback:logback-classic:1.2.11'
+}
+
+//
+// special Eclipse code to include non project EAR libraries for local deployment
+//
+
+def addDependentModuleNode(Node parentNode, String deployPath, File file) {
+   if (file.toPath().startsWith(rootProject.rootDir.toPath())) {
+     return
+   }
+   groovy.util.Node dependentModule = new Node(parentNode, 'dependent-module')
+   dependentModule.attributes().put ('deploy-path', deployPath)
+   dependentModule.attributes().put ('handle', 'module:/classpath/lib/' + file.getAbsolutePath())
+   groovy.util.Node dependencyType = new Node(dependentModule, 'dependency-type', 'uses')
+}
+
+eclipse.wtp.component.file {
+  withXml {
+     def wbModules = it.asNode().findAll { node -> node.name() == 'wb-module' }
+     if (wbModules.size() != 1) {
+        throw new StopActionException("wtp eclipse wb-module problem")
+     }
+     def node = wbModules.get(0)
+     configurations.earlib.resolve().each {
+        addDependentModuleNode(node, '/lib', it)
+     }
+  }
 }
