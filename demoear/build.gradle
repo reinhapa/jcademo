@@ -5,7 +5,7 @@ plugins {
 dependencies {
     deploy project(path: ':ra', configuration: 'archives')
     deploy project(path: ':webapp', configuration: 'archives')
-    earlib 'ch.qos.logback:logback-classic:1.2.11'
+    earlib 'ch.qos.logback:logback-classic:1.5.19'
 }
 
 //
