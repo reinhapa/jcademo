@@ -2,8 +2,8 @@ package net.reini.jcademo;
 
 import java.io.Serializable;
 
-import javax.resource.Referenceable;
-import javax.resource.ResourceException;
+import jakarta.resource.Referenceable;
+import jakarta.resource.ResourceException;
 
 public interface SampleConnectionFactory extends Serializable, Referenceable{
     /** 

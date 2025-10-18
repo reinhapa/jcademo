@@ -1,6 +1,6 @@
 package net.reini.jcademo;
 
-import javax.resource.ResourceException;
+import jakarta.resource.ResourceException;
 
 public interface SampleConnection extends AutoCloseable {
 

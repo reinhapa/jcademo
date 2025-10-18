@@ -2,8 +2,8 @@ package net.reini.jcademo;
 
 import javax.naming.NamingException;
 import javax.naming.Reference;
-import javax.resource.ResourceException;
-import javax.resource.spi.ConnectionManager;
+import jakarta.resource.ResourceException;
+import jakarta.resource.spi.ConnectionManager;
 
 public class SampleConnectionFactoryImpl implements SampleConnectionFactory {
     private static final long serialVersionUID = 1L;

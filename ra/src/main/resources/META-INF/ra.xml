@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/connector_1_7.xsd" id="Connector_ID" version="1.7">
+<connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/connector_2_0.xsd" id="Connector_ID" version="2.0">
   <description>Sample Resource Adapter</description>
   <display-name>SampleRA</display-name>
   <eis-type>Sample</eis-type>
